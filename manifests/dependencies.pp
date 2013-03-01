@@ -25,7 +25,7 @@ class boundary::dependencies {
   }
 
   case $::operatingsystem {
-    'redhat', 'centos', 'Amazon': {
+      /(?i:RedHat|CentOS|Scientific|Amazon|Linux)/: {
 
       $rpmkey = '/etc/pki/rpm-gpg/RPM-GPG-KEY-Boundary'
 
