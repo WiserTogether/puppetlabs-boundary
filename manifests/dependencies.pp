@@ -40,7 +40,7 @@ class boundary::dependencies {
         refreshonly => true,
       }
 
-      yumrepo { 'boundary':
+      yum::managed_repo { 'boundary':
         descr    => "Boundary $::operatingsystemrelease $::architecture Repository ",
         enabled  => 1,
         baseurl  => $::operatingsystem ? {
