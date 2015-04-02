@@ -83,8 +83,8 @@ class boundary {
   }
 
   service { 'bprobe':
-    ensure    => running,
-    enable    => true,
+    ensure    => stopped,
+    enable    => false,
     hasstatus => false,
     require   => Boundary_meter[$::fqdn],
   }
